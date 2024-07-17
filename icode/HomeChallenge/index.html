@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheCodes Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F9F7FE;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            width: 150px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #f9f7fe;
+            color: #27214266;
+            font-size: 16px;
+            width: 400px;
+            margin-right: 10px;
+        }
+
+        .search-container input[type="submit"] {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #885df1;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .search-container input[type="submit"]:hover {
+            background-color: #7458E7;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+
+        .city-info {
+            max-width: 60%;
+        }
+
+        .city-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2C2C54;
+            margin-bottom: 10px;
+        }
+
+        .weather-details {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        .weather-details strong {
+            color: #FF6F61;
+        }
+
+        .temperature-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .weather-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .temperature {
+            color: #212121;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1;
+            margin-left: 10px;
+        }
+
+        .unit {
+            font-size: 24px;
+            color: #333333;
+        }
+
+        .forecast-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .forecast-item {
+            text-align: center;
+            width: 18%;
+        }
+
+        .forecast-day {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        .forecast-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .forecast-temp-max {
+            font-size: 16px;
+            color: #FF6F61;
+            font-weight: bold;
+        }
+
+        .forecast-temp-min {
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .footer a {
+            color: #885df1;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo">
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Enter a city..">
+            <input type="submit" value="Search">
+        </div>
+        <div class="weather-container">
+            <div class="city-info">
+                <div class="city-name">San Francisco</div>
+                <div class="weather-details">
+                    <div>Sunday 16:12, few clouds</div>
+                    <div>Humidity: <strong>88%</strong>, Wind: <strong>4.12km/h</strong></div>
+                </div>
+            </div>
+            <div class="temperature-container">
+                <img src="cloudy.jpeg" alt="Cloudy" class="weather-icon">
+                <div>
+                    <span class="temperature">16</span>
+                    <span class="unit">°C</span>
+                </div>
+            </div>
+        </div>
+        <div class="forecast-container">
+            <div class="forecast-item">
+                <div class="forecast-day">Sun</div>
+                <img src="cloudy.jpeg" alt="Cloudy" class="forecast-icon">
+                <div>
+                    <span class="forecast-temp-max">19°</span>
+                    <span class="forecast-temp-min">14°</span>
+                </div>
+            </div>
+            <div class="forecast-item">
+                <div class="forecast-day">Mon</div>
+                <img src="cloudy.jpeg" alt="Cloudy" class="forecast-icon">
+                <div>
+                    <span class="forecast-temp-max">17°</span>
+                    <span class="forecast-temp-min">13°</span>
+                </div>
+            </div>
+            <div class="forecast-item">
+                <div class="forecast-day">Tue</div>
+                <img src="cloudy.jpeg" alt="Cloudy" class="forecast-icon">
+                <div>
+                    <span class="forecast-temp-max">17°</span>
+                    <span class="forecast-temp-min">14°</span>
+                </div>
+            </div>
+            <div class="forecast-item">
+                <div class="forecast-day">Wed</div>
+                <img src="cloudy.jpeg" alt="Cloudy" class="forecast-icon">
+                <div>
+                    <span class="forecast-temp-max">18°</span>
+                    <span class="forecast-temp-min">13°</span>
+                </div>
+            </div>
+            <div class="forecast-item">
+                <div class="forecast-day">Thu</div>
+                <img src="sun.jpeg" alt="Sunny" class="forecast-icon">
+                <div>
+                    <span class="forecast-temp-max">19°</span>
+                    <span class="forecast-temp-min">13°</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            This project was coded by <a href="https://www.shecodes.io" target="_blank">SheCodes</a> and is <a href="https://github.com/shecodesio/weather" target="_blank">open-sourced on GitHub</a> and <a href="https://shecodes-weather.netlify.app/" target="_blank">hosted on Netlify</a>.
+        </div>
+    </div>
+</body>
+</html>
