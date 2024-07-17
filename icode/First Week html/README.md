@@ -1,2 +1,0 @@
-# SheCodes
-SheCodes Bootcamp activity
